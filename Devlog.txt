@@ -1,0 +1,105 @@
+﻿Dev Log:
+
+
+V1 (11/15/2024):
+Game Idea: 
+Breakout Arcade Game but Minecraft themed. Instead of having the bricks at the top and the player at the bottom, we can have it in reverse such that it looks like the player is mining.
+Bricks: Minecraft blocks (dirt blocks at top, bedrock or ore blocks at the bottom)
+Player: Steve (maybe Steve on a bed to reach the necessary width to function as a paddle)
+Ball: A pickaxe
+
+
+V2 (11/16/2024):
+        Game Idea:
+Have the pickaxe “level up” each time it destroys enough blocks of a certain type, allowing it to break more bricks.
+        
+Aesthetic Goals:
+Goal 1: Level
+A game has a level or upgrade system if the player can improve the effectiveness/functionality of certain game objects. Maybe implement a health system such that when the pickaxe hits a block it can’t break yet, it loses durability.
+Success:
+* Players are actively satisfying conditions in order to reach the next level.
+* Players feel a desire to level up
+        Failure:
+* Players feel that it is too hard to level up
+* Players are unable to see how much progress they have made
+
+
+        Goal 2: Strategy
+A game is strategic if the player has to plan and think in order to proceed with the game.
+Success: 
+* Players have to take their time to move forward
+* Players may run into obstacles, but eventually overcome them.
+        Failure: 
+* Players are either proceeding with the game too easily or can’t proceed at all.
+* Players are brute forcing through the game.
+
+
+        Core Loop:
+The player is moving the paddle towards the ball, bouncing the ball with the paddle, directing it towards a brick, letting the ball bounce back, and repeat.
+This loop serves my aesthetic goal since the player will have to strategize which brick to destroy and level up through it.
+
+
+
+
+
+
+V3 (11/17/2024):
+        Game Idea:
+Different ores have different amount of points. Essentially, mining ores will allow players to upgrade their pickaxe to mine more ores, but also allow them to earn more points. Ending the game has been decided to occur when the pickaxe either runs out of lives, or when the pickaxe mines an emerald block.
+
+
+Durability idea has been removed, replaced with lives instead to follow a similar theme to breakout. Also, the durability idea would be harder to implement, and may cause the game to be too hard for players, as they may run out of durability to easily. Lives is implemented such that everytime it falls out of bounds / off screen, the player loses a life and the pickaxe respawns.
+
+
+A random ore location spawner has also been added when generating the level, to add a bit of variety during the different playthroughs of the game (The number of ores per y-axis remains the same, but the location of where they spawn may differ).
+
+
+Scoring function has been implemented. Each block has a different amount of points that contribute to the overall score when mined.
+
+
+Upgrade function has also been implemented. When the player has mined three of the required ore (display will keep track of this), the pickaxe will upgrade(sprite will also change to demonstrate this). Depending on the level of the pickaxe, the player can mined more ores.
+
+
+V4 (11/18/2024):
+Sounds has been added into the game. There are two sound cues, one when the block is mined/score increases, and one when the pickaxe upgrades to the next level.
+
+
+The number of blocks generator when the game starts has been decreased, specifically from the sides. This should make the game a bit easier to play as less blocks to hit and allows players to target the blocks from the side as well.
+
+
+Ores of all type has been increased to make the game less challenging. However, hitting the emerald will still cause the game to end. More emeralds simply means more possibilities of the game ending.
+
+
+An issue occurred where the pickaxe may get stuck bounces between the sides without a change in y-axis. This was resolved by adjusting the angles of the boundaries, so that the pickaxe is never bouncing between two parallel walls.
+
+
+
+
+
+
+
+
+
+
+
+
+After-Action Report:
+Originally, I had set out to do what I currently had, but with additional features such as more ores types with different effects such as gaining durability/health or a plethora of points as well as a durability idea in place of a lives system, to make it more diverse and challenging. Furthermore, ending the game was design around mining all the blocks. 
+
+
+However, due to time constraints, some of these ideas were scrapped for a simpler version that is currently present in this game, such as a counter of how many lives the player has, as well as mining the emerald be the termination condition for the game. This was because I realized that my original goals and ideas for the game may have been too challenging, so I had to adjust the difficulty level of the game as I was making it. As such my goal at the end was to make it fun and slightly challenging, but also allow players to have control in ending the game once they reach past a certain stage.
+
+
+What I accomplished so far for this game was the goal of having some strategy required to proceed through mining the blocks, as the player actually had to upgrade their pickaxe first to proceed with the game. Furthermore, I was able to successfully implement the upgrade idea, which would give players a goal in mind as they played through the game.
+
+
+Some things that went right or atleast very well in the process was creating the base game itself (the breakout portion) as I was able to quickly and successfully make it so that the pickaxe could bounce and would destroy blocks upon contact. Adding sound to certain actions was also really successful, especially since I had experience doing it in the last assignment.
+
+
+Some things that went wrong or atleast I had difficulty with was figuring out how to implement the upgrade system, specifically which component/script would deal with which parts of the system. Furthermore, there was an issue where the pickaxe may enter a stuck state, bouncing between the two sides of the screen. This however was resolved by adjusting the angles of the wall so that the pickaxe wouldn’t be able to enter that state in the first place.
+
+
+Something I wish I knew at the start of the project that I know now was to utilize physics materials to have a certain object perform a desired action. Sepcifcally, when trying ot make the ball bounce when coming into contact with objects, I originally tried to hard code the logic of bouncing. However, upon further research, I realized I could utilize a physics material to make the pickaxe have some bounciness to it and let the RigidBody2D handle the rest.
+
+
+What I learned from this process was understanding how different parts of different components and game objects could interact with each, and how I would properly or better implement said process. This is specifically in regards to making the upgrade system work, as I had to connect code between the different ores with the pickaxe and the score manager.

@@ -1,0 +1,26 @@
+﻿Credits
+
+
+Ore_Sprite_Sheet.png: 
+Original Author: Minecraft
+Site: https://pva.supply/
+
+
+Pickaxe_Sprite_Sheet.png
+Original Author: Minecraft
+Site: https://minecraft.fandom.com/wiki/Pickaxe
+
+
+Steve.png:
+Original Author: Minecraft
+Site: https://minecraft.fandom.com/wiki/Player
+
+
+UpgradePickaxe.mp3
+Original Author: Minecraft
+Site: https://tuna.voicemod.net/sound/1bfb9d22-dc0a-4c3c-8b1d-b6f213b227cd
+
+
+XP.mp3
+Original Author: Minecraft
+Site: https://www.myinstants.com/en/instant/minecraft-xp-sound/

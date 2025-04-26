@@ -1,0 +1,42 @@
+﻿Exercise 5 Instructions:
+
+
+This game is a modified, Minecraft themed breakout game. The player controls a paddle (Steve)that  moves one dimensionally left and right, and is able to bounce a ball (the pickaxe) towards the bricks (Minecraft blocks). Upon collision with the blocks,they will be destroyed, where different types of blocks will have different effects. Unlike the actual breakout game, at the start, there are some blocks that can’t be destroyed upon collision with the pickaxe, and can also be destroyed upon reaching a high enough pickaxe level. The goal of this game is to mine as many blocks as possible and upgrade your pickaxe as best as you can before you run out of lives or before you mine the emerald block. Steve needs only one emerald to trade with a villager so upon colliding with any emerald block, the game will end. If you run out of lives, the game will also end, as Steve’s pickaxe has been destroyed.
+
+
+Objects:
+Steve (Paddle): This is the paddle that the player controls
+* Left arrow key (Press/Hold): Moves left horizontally
+* Right arrow key (Press/Hold): Moves right horizontally
+
+
+Pickaxe (Ball): This is your ball that is being bounced off from the paddle (thrown by Steve). It will start off as a wooden pickaxe. When it comes into contact with either the edge of the screen or Steve, it will bounce off. When it comes into contact with a block of any type, it will destroy said block. Everytime the player mines a certain number of blocks, the pickaxe will undergo a change. 
+* Levels/Upgrades:
+1. Wooden Pickaxe
+2. Stone Pickaxe
+3. Iron Pickaxe
+4. Diamond Pickaxe
+
+
+Blocks (Bricks): These are the bricks that the player wants to destroy (mine). There are different types of blocks with different effects upon collision.
+* Grass/Dirt Block: These are your basic blocks. No effect, besides earning 1 point.
+* Stone Block: Similar to the Grass and Dirt Blocks, they earn you 1 point. However, upon mining three stone blocks, your pickaxe will upgrade to a stone pickaxe.
+* Iron Block: Earns you 3 points. Upon mining three Iron blocks, your pickaxe will become an iron pickaxe. Can only be mined by stone pickaxe or higher.
+* Diamond Block: Earns you 7 points. Upon mining three Diamond blocks, your pickaxe will become a diamond pickaxe. Can only be mined by iron pickaxe or higher.
+* Emerald Block: Earns you 10 points. Will also end the game when mined. Can only be mined by diamond pickaxe.
+
+
+Score: There is a scoreboard on the top right corner of the screen that will display your current score. Everytime your score changes / when you mine a block, a sound will play.
+
+
+Lives: A count of how many lives you have left. It is under the scoreboard. Everytime the pickaxe moves out of the screen, it decreases by 1. Once it hits 0, the game will end.
+
+
+Ore Count: A collection of displays that record how many ores you have mined for each block type (stone, iron, diamond)
+
+
+Termination:
+Goal: Score as many points as you can before you run out of lives or before you mined the emerald block. After that the game ends.
+
+
+Once you hit the termination condition, the game will stop and end and your scoreboard will report how many points you’ve scored. You can restart the game by clicking the Unity play button again.
